@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDG 4 — Quality Education</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- INTRO: Falling letters -->
+  <section id="intro" class="intro" aria-label="Intro animation">
+    <div class="intro-wrap">
+     
+      <h2 id="introText" class="intro-heading" data-text="QUALITY EDUCATION">QUALITY   EDUCATION</h2>
+      
+    </div>
+  </section>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="sdg4-icon.png" alt="SDG 4 icon" class="brand-icon" />
+        <h1>SDG 4 — Quality Education</h1>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#match">Match</a>
+        <a href="#plan">Your Plan</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main>
+    <!-- HERO -->
+    <section id="about" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h2>Ensure inclusive and equitable <span class="underline">quality education</span> for all.</h2>
+          <p class="muted">
+            SDG 4 aims to guarantee free, equitable, and quality primary and secondary education, promote lifelong learning,
+            and upskill communities.
+          </p>
+          <div class="cta">
+            <button class="btn solid" id="startQuizBtn">Start Quiz</button>
+            <button class="btn outline" id="pledgeBtn">Create a Pledge</button>
+          </div>
+
+          <div class="stats" aria-live="polite">
+            <div class="stat"><strong id="stat1">0</strong><span>Students Worldwide</span></div>
+            <div class="stat"><strong id="stat2">0</strong><span>Students Studying per Minute</span></div>
+            <div class="stat"><strong id="streak">0</strong><span>Days Promoting Quality Education</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="sdg4-icon.png" alt="SDG 4 icon large" class="hero-icon" />
+          <canvas id="confetti" aria-hidden="true"></canvas>
+        </div>
+      </div>
+    </section>
+    <!-- Trivia -->
+     <section id="trivia" class="panel">
+  <div class="wrap">
+    <div class="row" style="justify-content:space-between; align-items:center">
+      <h3 style="margin:0">SDG 4 Trivia</h3>
+      <button id="nextTrivia" class="btn outline">New fact</button>
+    </div>
+
+    <div class="trivia-card" role="status" aria-live="polite">
+      <p id="triviaText">Loading trivia…</p>
+      <div class="trivia-meta">
+        <span id="triviaIndex">1</span>/<span id="triviaTotal">–</span>
+      </div>
+    </div>
+
+    <div class="trivia-actions">
+      <button id="revealSource" class="btn solid">Show Source</button>
+      <a id="triviaLink" class="btn outline" href="#" target="_blank" rel="noopener" style="display:none">Open Source</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- QUIZ -->
+    <section id="quiz" class="panel">
+      <div class="wrap">
+        <h3>Quick Quiz</h3>
+        <p id="question" class="question"></p>
+        <div id="choices" class="choices" role="radiogroup" aria-label="Quiz choices"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="progress" aria-hidden="true"><div id="progressBar" class="bar"></div></div>
+        <div class="row">
+          <button id="nextBtn" class="btn solid">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATCH -->
+    <section id="match" class="panel">
+      <div class="wrap">
+        <div class="row" style="justify-content:space-between">
+          <h3>Match Challenge: Barriers → Solutions</h3>
+          <button id="resetMatch" class="btn outline">Reset</button>
+        </div>
+        <p class="muted">Drag items together inside the box to complete a match.</p>
+        <div class="match-grid">
+          <div class="bucket" id="barriers" aria-label="Barriers"></div>
+          <div class="bucket" id="solutions" aria-label="Solutions"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN -->
+    <section id="plan" class="panel">
+      <div class="wrap">
+        <h3>My Learning Pledge</h3>
+        <textarea id="pledge" placeholder="Example: Tutor a younger student once a week; share open resources with my class; complete a free online course…"></textarea>
+        <div class="row">
+          <button class="btn solid" id="savePledge">Save</button>
+          <button class="btn outline" id="clearPledge">Clear</button>
+        </div>
+        <ul id="achievements" class="achievements"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      SDG 4 — Quality Education
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
